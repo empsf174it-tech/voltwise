@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Voltwise</title>
+  <meta name="description" content="Get in touch with the Voltwise team for inquiries, feedback, or review requests.">
+  <meta name="theme-color" content="#060609">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><span class="logo-mark"><i class="ph-fill ph-lightning"></i></span> Voltwise</a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="compare.html" class="btn btn-primary btn-sm">Compare devices</a>
+        <button class="hamburger" aria-label="Toggle Navigation"><i class="ph ph-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-drawer">
+    <button class="close-drawer" aria-label="Close Navigation"><i class="ph ph-x"></i></button>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="reviews.html" class="mobile-nav-link">Reviews</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="compare.html" class="btn btn-primary btn-block mobile-nav-cta">Compare devices</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+      <div class="container">
+        <div class="eyebrow reveal">Contact</div>
+        <h1 class="reveal delay-1">Let's <span class="text-gradient">talk tech.</span></h1>
+        <p class="subtitle reveal delay-2">Have a question about a review or want to pitch a device? Drop us a line — a real human reads every message.</p>
+      </div>
+    </section>
+
+    <section style="padding-top: 0;">
+      <div class="container contact-grid">
+        <!-- Static: Other ways to reach us -->
+        <aside class="contact-aside">
+          <h2 class="reveal">Other ways to reach us</h2>
+          <p class="reveal delay-1">We typically reply within two business days.</p>
+          <div class="channel reveal delay-1">
+            <div class="card-icon"><i class="ph ph-envelope-simple"></i></div>
+            <div>
+              <h4>Editorial</h4>
+              <p>Corrections, tips, and review feedback.</p>
+              <a href="mailto:editors@voltwise-demo.com">editors@voltwise-demo.com</a>
+            </div>
+          </div>
+          <div class="channel reveal delay-2">
+            <div class="card-icon"><i class="ph ph-package"></i></div>
+            <div>
+              <h4>Review requests</h4>
+              <p>Brands and PR teams with upcoming launches.</p>
+              <a href="mailto:lab@voltwise-demo.com">lab@voltwise-demo.com</a>
+            </div>
+          </div>
+          <div class="channel reveal delay-3">
+            <div class="card-icon"><i class="ph ph-handshake"></i></div>
+            <div>
+              <h4>Partnerships</h4>
+              <p>Licensing, syndication, and business inquiries.</p>
+              <a href="mailto:hello@voltwise-demo.com">hello@voltwise-demo.com</a>
+            </div>
+          </div>
+          <div class="channel reveal delay-4" style="border-bottom: none;">
+            <div class="card-icon"><i class="ph ph-map-pin"></i></div>
+            <div>
+              <h4>The lab</h4>
+              <p>221 Circuit Lane, Suite 4<br>San Francisco, CA (demo address)</p>
+            </div>
+          </div>
+        </aside>
+
+        <form class="card form-card reveal delay-2" action="https://formspree.io/f/placeholder" method="POST" novalidate>
+          <h3 style="margin-bottom: var(--spacing-6);">Send us a message</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-input" required placeholder="John Doe">
+              <div class="error-message">This field is required</div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" required placeholder="john@example.com">
+              <div class="error-message">Please enter a valid email</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject" class="form-label">Subject</label>
+            <select id="subject" name="subject" class="form-input" required>
+              <option value="">Select a topic…</option>
+              <option value="review-request">Review Request</option>
+              <option value="feedback">Feedback</option>
+              <option value="business">Business Inquiry</option>
+            </select>
+            <div class="error-message">Please select a subject</div>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-textarea" rows="5" required placeholder="How can we help?"></textarea>
+            <div class="error-message">This field is required</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top: var(--spacing-2);">Send message <i class="ph ph-paper-plane-tilt"></i></button>
+          <p class="text-muted" style="font-size: .8rem; margin: var(--spacing-4) 0 0; text-align: center;">We'll never share your details. No spam, ever.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-flush-top">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow reveal">Visit the lab</div>
+            <h2 class="reveal delay-1">Find us in San Francisco.</h2>
+          </div>
+        </div>
+        <div class="map-card card reveal delay-2">
+          <iframe
+            src="https://www.google.com/maps?q=San+Francisco,+CA&z=13&output=embed"
+            title="Map showing the Voltwise lab in San Francisco"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 16px;"><span class="logo-mark"><i class="ph-fill ph-lightning"></i></span> Voltwise</a>
+          <p>Unbiased, lab-tested reviews and comparisons for the electronics you use every day. We test so you don't have to guess.</p>
+          <div class="socials">
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="RSS feed"><i class="ph ph-rss"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="reviews.html" class="footer-link">Reviews</a>
+          <a href="compare.html" class="footer-link">Compare</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <p class="disclosure" style="margin-top: 16px;">Some links may be affiliate links. Reviews are independent. Voltwise is a demo brand. All prices and specs are placeholder demo data.</p>
+        </div>
+      </div>
+      <div class="footer-wordmark" aria-hidden="true">Voltwise</div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Voltwise. All rights reserved.</p>
+        <p class="status-dot">Lab online &middot; 12 devices in testing</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

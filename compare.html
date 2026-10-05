@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Devices | Voltwise</title>
+  <meta name="description" content="Side-by-side comparison of the latest tech gadgets.">
+  <meta name="theme-color" content="#060609">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- GA_TAG -->
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><span class="logo-mark"><i class="ph-fill ph-lightning"></i></span> Voltwise</a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="compare.html" class="btn btn-primary btn-sm">Compare devices</a>
+        <button class="hamburger" aria-label="Toggle Navigation"><i class="ph ph-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-drawer">
+    <button class="close-drawer" aria-label="Close Navigation"><i class="ph ph-x"></i></button>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="reviews.html" class="mobile-nav-link">Reviews</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="compare.html" class="btn btn-primary btn-block mobile-nav-cta">Compare devices</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+      <div class="container">
+        <div class="eyebrow reveal">Compare</div>
+        <h1 class="reveal delay-1">The feature matrix. <span class="text-gradient">Spec by spec.</span></h1>
+        <p class="subtitle reveal delay-2">Line up 2–4 phones in a side-by-side feature matrix, grouped by display, performance, battery, camera and more. (Demo data)</p>
+      </div>
+    </section>
+
+    <section class="section-flush-top">
+      <div class="container">
+        <div class="matrix-toolbar reveal">
+          <div>
+            <span class="filter-label" id="mx-tray-label">Comparing (2–4 devices)</span>
+            <div class="device-tray" id="mx-tray" role="group" aria-labelledby="mx-tray-label"></div>
+          </div>
+          <div class="matrix-controls">
+            <div class="filter-group">
+              <label for="mx-add" class="filter-label">Add a device</label>
+              <div class="matrix-add">
+                <select id="mx-add" class="filter-select"></select>
+                <button type="button" id="mx-add-btn" class="btn btn-outline btn-sm"><i class="ph ph-plus" aria-hidden="true"></i> Add</button>
+              </div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="mx-diff">
+              <span class="switch-track" aria-hidden="true"></span>
+              Show differences only
+            </label>
+          </div>
+        </div>
+
+        <p class="matrix-msg" id="mx-msg" role="status" aria-live="polite"></p>
+        <p class="affiliate-note flush"><i class="ph ph-info" aria-hidden="true"></i> "Check price" buttons are affiliate links. We may earn a commission at no cost to you. All specs and prices are demo data.</p>
+
+        <div class="matrix-scroll reveal" tabindex="0" role="region" aria-label="Feature matrix. Scroll horizontally to see all devices.">
+          <table class="matrix" id="matrix">
+            <caption class="sr-only">Feature matrix (demo data)</caption>
+          </table>
+        </div>
+        <noscript><p class="affiliate-note">The interactive feature matrix needs JavaScript. See our <a href="reviews.html" class="link-arrow">reviews hub</a> for full specs.</p></noscript>
+      </div>
+    </section>
+
+    <!-- Static: Category winners -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow reveal">Quick verdict</div>
+            <h2 class="reveal delay-1">Category winners, at a glance.</h2>
+          </div>
+          <p class="subtitle reveal delay-2" style="max-width: 420px;">Short on time? Here's which phone wins on the metrics our readers ask about most.</p>
+        </div>
+        <div class="card-grid">
+          <div class="card winner-card reveal">
+            <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=240&q=80" alt="Titanium Pro Max" loading="lazy">
+            <div>
+              <div class="winner-tag"><i class="ph-fill ph-battery-full"></i> Best battery</div>
+              <h3>Titanium Pro Max</h3>
+              <p>14h 22m in our rundown — over an hour ahead of the pack.</p>
+            </div>
+          </div>
+          <div class="card winner-card reveal delay-1">
+            <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=240&q=80" alt="Galaxy Z Ultra" loading="lazy">
+            <div>
+              <div class="winner-tag"><i class="ph-fill ph-monitor"></i> Best display</div>
+              <h3>Galaxy Z Ultra</h3>
+              <p>144Hz, 6.8" and the most accurate colours we measured.</p>
+            </div>
+          </div>
+          <div class="card winner-card reveal delay-2">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=240&q=80" alt="Quantum Pixel 7" loading="lazy">
+            <div>
+              <div class="winner-tag"><i class="ph-fill ph-tag"></i> Best value</div>
+              <h3>Quantum Pixel 7</h3>
+              <p>Flagship-grade camera smarts for roughly half the price.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 16px;"><span class="logo-mark"><i class="ph-fill ph-lightning"></i></span> Voltwise</a>
+          <p>Unbiased, lab-tested reviews and comparisons for the electronics you use every day. We test so you don't have to guess.</p>
+          <div class="socials">
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="RSS feed"><i class="ph ph-rss"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="reviews.html" class="footer-link">Reviews</a>
+          <a href="compare.html" class="footer-link">Compare</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <p class="disclosure" style="margin-top: 16px;">Some links may be affiliate links. Reviews are independent. Voltwise is a demo brand. All prices and specs are placeholder demo data.</p>
+        </div>
+      </div>
+      <div class="footer-wordmark" aria-hidden="true">Voltwise</div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Voltwise. All rights reserved.</p>
+        <p class="status-dot">Lab online &middot; 12 devices in testing</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/compare.js"></script>
+</body>
+</html>
