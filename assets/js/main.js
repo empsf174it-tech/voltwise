@@ -5,6 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
+  // Back to top
+  const toTop = document.createElement('button');
+  toTop.className = 'back-to-top';
+  toTop.setAttribute('aria-label', 'Back to top');
+  toTop.innerHTML = '<i class="ph-bold ph-arrow-up"></i>';
+  document.body.appendChild(toTop);
+  const onTopScroll = () => toTop.classList.toggle('show', window.scrollY > 600);
+  onTopScroll();
+  window.addEventListener('scroll', onTopScroll, { passive: true });
+  toTop.addEventListener('click', () => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+
   // Mobile Navigation
   const hamburger = document.querySelector('.hamburger');
   const drawer = document.querySelector('.mobile-nav-drawer');

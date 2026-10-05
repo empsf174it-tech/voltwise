@@ -2486,3 +2486,33 @@ footer {
 
 /* ---------- Mobile drawer CTA ---------- */
 .mobile-nav-cta { margin-top: var(--spacing-6); min-height: 52px; }
+
+/* ---------- Back to top ---------- */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 900;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--gradient-brand);
+  color: #05050a;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(34, 228, 255, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0.3s, box-shadow 0.3s var(--ease);
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(34, 228, 255, 0.45); }
+.back-to-top:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
+
+@media (max-width: 640px) {
+  .back-to-top { right: 16px; bottom: 16px; width: 44px; height: 44px; }
+}
